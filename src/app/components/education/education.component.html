@@ -1,0 +1,124 @@
+<section id="education" class="education section">
+  <div class="container">
+    <h2 class="section-title">Mon Parcours Académique</h2>
+    
+    <div class="education-timeline">
+      <!-- Baccalauréat -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-period">2023</div>
+          <h3>Lycée Secondaire de Bouargoub, Nabeul</h3>
+          <h4>Baccalauréat en Sciences Mathématiques</h4>
+          <p>Diplôme obtenu avec succès</p>
+          <div class="timeline-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Première étape -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-period">2023 - 2024</div>
+          <h3>ISET Mahdia</h3>
+          <h4>1ère année en IT - Tronc commun</h4>
+          <p>Admise avec la mention Bien</p>
+          <div class="timeline-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deuxième étape -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-period">2024 - 2025</div>
+          <h3>ISET Rades</h3>
+          <h4>2ème année en Développement des Systèmes Informatiques</h4>
+          <p>Admise avec la mention Bien</p>
+          <div class="timeline-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Étape actuelle -->
+      <div class="timeline-item current">
+        <div class="timeline-content">
+          <div class="timeline-period">{{ getCurrentYear() }} - Présent</div>
+          <h3>ISET Radès</h3>
+          <h4>3ème année en Développement des Systèmes d'Information</h4>
+          <p>Dernière année de licence - Classée parmi les premières de la promotion</p>
+          <div class="timeline-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Nouvelle section pour les stages -->
+    <div class="stages-section">
+      <h3>Expériences Professionnelles</h3>
+      <div class="stages-grid">
+        <!-- Stage 1: Lumière Transport et Logistique -->
+        <div class="stage-card">
+          <div class="stage-header">
+            <h4>{{ stages[0].entreprise }}</h4>
+            <span class="stage-period">{{ stages[0].periode }}</span>
+          </div>
+          <div class="stage-badge">{{ stages[0].badge }}</div>
+          <p class="stage-description">{{ stages[0].description }}</p>
+          <div class="stage-features">
+            <span *ngFor="let competence of stages[0].competences" class="feature-tag">
+              {{ competence }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Stage 2: Centre National de l'Informatique -->
+        <div class="stage-card">
+          <div class="stage-header">
+            <h4>{{ stages[1].entreprise }}</h4>
+            <span class="stage-period">{{ stages[1].periode }}</span>
+          </div>
+          <div class="stage-badge">{{ stages[1].badge }}</div>
+          <p class="stage-description">{{ stages[1].description }}</p>
+          <div class="stage-features">
+            <span *ngFor="let competence of stages[1].competences" class="feature-tag">
+              {{ competence }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="education-extra">
+      <h3>Engagements Associatifs</h3>
+      <div class="engagement-cards">
+        <div class="engagement-card">
+          <div class="engagement-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h4>Secrétaire générale IEEE ISET Radès</h4>
+          <p>Gestion administrative et organisation d'événements technologiques.</p>
+        </div>
+        
+        <div class="engagement-card">
+          <div class="engagement-icon">
+            <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <h4>Membre du Croissant Rouge</h4>
+          <p>Engagement humanitaire et participation à des actions sociales depuis 2024.</p>
+        </div>
+        
+        <div class="engagement-card">
+          <div class="engagement-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h4>Membre du club Securities - Cybersécurité</h4>
+          <p>Apprentissage et sensibilisation aux enjeux de la sécurité informatique.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

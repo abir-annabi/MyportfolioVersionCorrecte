@@ -1,0 +1,70 @@
+<header [class.scrolled]="isScrolled">
+  <div class="container">
+    <div class="logo">
+      <a routerLink="/" (click)="scrollTo('home', $event)">
+        <span class="logo-text">{{ profileData.name }}</span>
+        <span class="logo-dot"></span>
+      </a>
+    </div>
+    
+    <nav [class.active]="isMenuOpen">
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="#home" (click)="scrollTo('home', $event)" class="nav-link">
+            <i class="fas fa-home nav-icon"></i>
+            <span class="link-text"> Accueil</span>
+            <span class="link-hover"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" (click)="scrollTo('about', $event)" class="nav-link">
+            <i class="fas fa-user nav-icon"></i>
+            <span class="link-text"> À propos</span>
+            <span class="link-hover"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#skills" (click)="scrollTo('skills', $event)" class="nav-link"> 
+            <i class="fas fa-code nav-icon"></i>
+            <span class="link-text"> Compétences</span>
+            <span class="link-hover"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#projets" (click)="scrollTo('projets', $event)" class="nav-link">
+            <i class="fas fa-briefcase nav-icon"></i>
+            <span class="link-text"> Projets</span>
+            <span class="link-hover"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#education" (click)="scrollTo('education', $event)" class="nav-link">
+            <i class="fas fa-graduation-cap nav-icon"></i>
+            <span class="link-text"> Formation</span>
+            <span class="link-hover"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" (click)="scrollTo('contact', $event)" class="nav-link">
+            <i class="fas fa-envelope nav-icon"></i>
+            <span class="link-text"> Contact</span>
+            <span class="link-hover"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" (click)="downloadCV($event)" class="nav-link cv-link">
+            <i class="fas fa-download nav-icon"></i>
+            <span class="link-text"> CV</span>
+            <span class="link-hover"></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+    <div class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+    </div>
+  </div>
+</header>

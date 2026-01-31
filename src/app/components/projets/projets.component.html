@@ -1,0 +1,306 @@
+<section id="projets" class="projets section">
+    <div class="container">
+        <h2 class="section-title">Mes Projets</h2>
+        
+        <div class="projets-intro">
+            <p>Découvrez mes principales réalisations techniques et créatives. Chaque projet représente une opportunité d'apprentissage et d'innovation.</p>
+        </div>
+
+        <div class="projets-grid">
+            <!-- Projet 1: E-commerce Symfony -->
+            <div class="projet-card">
+                <div class="projet-image">
+                    <div class="projet-carousel" id="carousel-0">
+                        <img 
+                            src="images/sym1.png" 
+                            alt="E-commerce Symfony - Page d'accueil" 
+                            class="projet-img" 
+                            [class.active]="isActive(0, 0)">
+                        <img 
+                            src="images/sym2.png" 
+                            alt="E-commerce Symfony - Page produit" 
+                            class="projet-img" 
+                            [class.active]="isActive(0, 1)">
+                        <img 
+                            src="images/sym3.png" 
+                            alt="E-commerce Symfony - Panier" 
+                            class="projet-img" 
+                            [class.active]="isActive(0, 2)">
+                        <img 
+                            src="images/sym4.png" 
+                            alt="E-commerce Symfony - Administration" 
+                            class="projet-img" 
+                            [class.active]="isActive(0, 3)">
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev" (click)="prevSlide(0, $event)">‹</button>
+                        <button class="carousel-btn next" (click)="nextSlide(0, $event)">›</button>
+                    </div>
+                    <div class="projet-badge">Symfony</div>
+                </div>
+                
+                <div class="projet-content">
+                    <h3>E-commerce de Livres</h3>
+                    <p class="projet-description">
+                        Application web e-commerce complète avec système d'authentification, vérification email, panier d'achat et interface administrateur.
+                    </p>
+                    
+                    <div class="projet-features">
+                        <span class="feature-tag">Authentication</span>
+                        <span class="feature-tag">Email Verification</span>
+                        <span class="feature-tag">Shopping Cart</span>
+                        <span class="feature-tag">Admin Dashboard</span>
+                    </div>
+                    
+                    <div class="projet-links">
+                        <a href="https://github.com/abir-annabi/projet_symfony-version-mail-de-verification.git" target="_blank" class="projet-link">
+                            <i class="fab fa-github"></i>
+                            Code Source
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 2: Gestion Municipale Spring/Angular -->
+            <div class="projet-card">
+                <div class="projet-image">
+                    <div class="projet-carousel" id="carousel-1">
+                        <img 
+                            src="images/prj1.png" 
+                            alt="Gestion Municipale - Dashboard" 
+                            class="projet-img" 
+                            [class.active]="isActive(1, 0)">
+                        <img 
+                            src="images/prj2.png" 
+                            alt="Gestion Municipale - Formulaire" 
+                            class="projet-img" 
+                            [class.active]="isActive(1, 1)">
+                        <img 
+                            src="images/prj3.png" 
+                            alt="Gestion Municipale - Authentification" 
+                            class="projet-img" 
+                            [class.active]="isActive(1, 2)">
+                        <img 
+                            src="images/prj4.png" 
+                            alt="Gestion Municipale - Administration" 
+                            class="projet-img" 
+                            [class.active]="isActive(1, 3)">
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev" (click)="prevSlide(1, $event)">‹</button>
+                        <button class="carousel-btn next" (click)="nextSlide(1, $event)">›</button>
+                    </div>
+                    <div class="projet-badge">Spring Boot & Angular</div>
+                </div>
+                
+                <div class="projet-content">
+                    <h3>Gestion des Décisions Municipales</h3>
+                    <p class="projet-description">
+                        Application de gestion complète avec authentification sécurisée à 3 étapes, CRUD avancé et interface responsive.
+                    </p>
+                    
+                    <div class="projet-features">
+                        <span class="feature-tag">3-Factor Auth</span>
+                        <span class="feature-tag">reCAPTCHA</span>
+                        <span class="feature-tag">Email Verification</span>
+                        <span class="feature-tag">CRUD Operations</span>
+                    </div>
+                    
+                    <div class="projet-links">
+                        <a href="https://github.com/abir-annabi/ProjetStageBackend.git" target="_blank" class="projet-link">
+                            <i class="fab fa-github"></i>
+                            Backend
+                        </a>
+                        <a href="https://github.com/abir-annabi/projetStageFrontend.git" target="_blank" class="projet-link">
+                            <i class="fab fa-github"></i>
+                            Frontend
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 3: Location Maisons Symfony/Angular -->
+            <div class="projet-card">
+                <div class="projet-image">
+                    <div class="projet-carousel" id="carousel-2">
+                        <img 
+                            src="images/loc1.png" 
+                            alt="Location Maisons - Liste" 
+                            class="projet-img" 
+                            [class.active]="isActive(2, 0)">
+                        <img 
+                            src="images/loc2.png" 
+                            alt="Location Maisons - Détail" 
+                            class="projet-img" 
+                            [class.active]="isActive(2, 1)">
+                        <img 
+                            src="images/loc3.png" 
+                            alt="Location Maisons - Upload" 
+                            class="projet-img" 
+                            [class.active]="isActive(2, 2)">
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev" (click)="prevSlide(2, $event)">‹</button>
+                        <button class="carousel-btn next" (click)="nextSlide(2, $event)">›</button>
+                    </div>
+                    <div class="projet-badge">Symfony & Angular</div>
+                </div>
+                
+                <div class="projet-content">
+                    <h3>Plateforme de Location de Maisons</h3>
+                    <p class="projet-description">
+                        Application de location immobilière avec système d'upload de photos, recherche avancée et gestion des réservations.
+                    </p>
+                    
+                    <div class="projet-features">
+                        <span class="feature-tag">Photo Upload</span>
+                        <span class="feature-tag">Advanced Search</span>
+                        <span class="feature-tag">Booking System</span>
+                        <span class="feature-tag">Responsive Design</span>
+                    </div>
+                    
+                    <div class="projet-links">
+                        <a href="https://github.com/abir-annabi/Projetintegration-version-photos-uploads.git" target="_blank" class="projet-link">
+                            <i class="fab fa-github"></i>
+                            Code Source
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 4: Application Fitness Mobile -->
+            <div class="projet-card">
+                <div class="projet-image">
+                    <div class="projet-carousel" id="carousel-3">
+                        <img 
+                            src="images/fit1.jpeg" 
+                            alt="Application Fitness - Accueil" 
+                            class="projet-img" 
+                            [class.active]="isActive(3, 0)">
+                        <img 
+                            src="images/fit2.jpeg" 
+                            alt="Application Fitness - Programmes" 
+                            class="projet-img" 
+                            [class.active]="isActive(3, 1)">
+                        <img 
+                            src="images/fit3.jpeg" 
+                            alt="Application Fitness - Nutrition" 
+                            class="projet-img" 
+                            [class.active]="isActive(3, 2)">
+                        <img 
+                            src="images/fit4.jpeg" 
+                            alt="Application Fitness - Profil" 
+                            class="projet-img" 
+                            [class.active]="isActive(3, 3)">
+                        <img 
+                            src="images/fit5.jpeg" 
+                            alt="Application Fitness - Chat" 
+                            class="projet-img" 
+                            [class.active]="isActive(3, 4)">
+                        <img 
+                            src="images/fit6.jpeg" 
+                            alt="Application Fitness - Chatbot" 
+                            class="projet-img" 
+                            [class.active]="isActive(3, 5)">
+                        <img 
+                            src="images/fit7.jpeg" 
+                            alt="Application Fitness - Exercices" 
+                            class="projet-img" 
+                            [class.active]="isActive(3, 6)">
+                        <img 
+                            src="images/fit8.jpeg" 
+                            alt="Application Fitness - Statistiques" 
+                            class="projet-img" 
+                            [class.active]="isActive(3, 7)">
+                        <img 
+                            src="images/fit9.jpeg" 
+                            alt="Application Fitness - Paramètres" 
+                            class="projet-img" 
+                            [class.active]="isActive(3, 8)">
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev" (click)="prevSlide(3, $event)">‹</button>
+                        <button class="carousel-btn next" (click)="nextSlide(3, $event)">›</button>
+                    </div>
+                    <div class="projet-badge">Kotlin & Spring Boot</div>
+                </div>
+                
+                <div class="projet-content">
+                    <h3>Application de Suivi Nutritionnel et Fitness</h3>
+                    <p class="projet-description">
+                        Application mobile complète avec IA pour un suivi nutritionnel personnalisé. Développement d'une plateforme web et mobile avec JX pour un suivi nutritionnel personnalisé, messagerie commune et chatbot Ollama intégré.
+                    </p>
+                    
+                    <div class="projet-features">
+                        <span class="feature-tag">Chatbot Ollama</span>
+                        <span class="feature-tag">Messagerie</span>
+                        <span class="feature-tag">Programmes d'entraînement</span>
+                        <span class="feature-tag">Suivi nutritionnel</span>
+                        <span class="feature-tag">Mobile Android</span>
+                    </div>
+                    
+                    <div class="projet-links">
+                        <a href="https://github.com/abir-annabi/projetIntegration_PartieMobile.git" target="_blank" class="projet-link">
+                            <i class="fab fa-github"></i>
+                            Frontend Mobile
+                        </a>
+                        <a href="https://github.com/abir-annabi/backend-projet-fitness-mobile.git" target="_blank" class="projet-link">
+                            <i class="fab fa-github"></i>
+                            Backend
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 5: Data Warehouse et Business Intelligence -->
+            <div class="projet-card">
+                <div class="projet-image">
+                    <div class="projet-carousel" id="carousel-4">
+                        <img 
+                            src="images/dw1.png" 
+                            alt="Data Warehouse - SSIS ETL Process" 
+                            class="projet-img" 
+                            [class.active]="isActive(4, 0)">
+                        <img 
+                            src="images/dw2.png" 
+                            alt="Data Warehouse - Power BI Dashboard" 
+                            class="projet-img" 
+                            [class.active]="isActive(4, 1)">
+                        <img 
+                            src="images/dw3.png" 
+                            alt="Data Warehouse - SQL Server Integration" 
+                            class="projet-img" 
+                            [class.active]="isActive(4, 2)">
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev" (click)="prevSlide(4, $event)">‹</button>
+                        <button class="carousel-btn next" (click)="nextSlide(4, $event)">›</button>
+                    </div>
+                    <div class="projet-badge">Business Intelligence</div>
+                </div>
+                
+                <div class="projet-content">
+                    <h3>Data Warehouse et Visualisation BI</h3>
+                    <p class="projet-description">
+                        Projet de Business Intelligence complet avec modélisation de données, processus ETL et création de tableaux de bord interactifs. Intégration de données provenant de multiples sources et visualisation avec Power BI.
+                    </p>
+                    
+                    <div class="projet-features">
+                        <span class="feature-tag">SQL Server</span>
+                        <span class="feature-tag">SSIS ETL</span>
+                        <span class="feature-tag">Power BI</span>
+                        <span class="feature-tag">Data Modeling</span>
+                        <span class="feature-tag">Visual Studio</span>
+                    </div>
+                    
+                    <div class="projet-links">
+                        <span class="projet-info">
+                            <i class="fas fa-info-circle"></i>
+                            Projet académique - Business Intelligence
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

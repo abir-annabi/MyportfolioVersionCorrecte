@@ -1,0 +1,499 @@
+.projets {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f8f9ff 0%, #fef7ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.projets::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(45deg, #ff7eb9, #ff65a3);
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 8s ease-in-out infinite;
+}
+
+.projets::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(45deg, #7afcff, #65fffa);
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite reverse;
+}
+
+.projets .container {
+  position: relative;
+  z-index: 1;
+}
+
+.projets-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.projets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.projet-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.projet-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.projet-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  background: #f8f4ff;
+}
+
+.projet-img {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  scroll-snap-align: start;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.projet-img.active {
+  opacity: 1;
+  position: relative;
+}
+
+.projet-carousel {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.carousel-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  color: #ff7eb9;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn:hover {
+  background: #ff7eb9;
+  color: white;
+  transform: scale(1.1);
+}
+
+.projet-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(45deg, #ff7eb9, #ff65a3);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.projet-content {
+  padding: 30px;
+}
+
+.projet-content h3 {
+  margin: 0 0 15px 0;
+  color: #5c2e47;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.projet-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.projet-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.feature-tag {
+  background: linear-gradient(45deg, #f8f4ff, #ffeef7);
+  color: #ff7eb9;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 126, 185, 0.2);
+}
+
+.projet-links {
+  display: flex;
+  gap: 15px;
+}
+
+.projet-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #ff7eb9, #ff65a3);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.projet-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 101, 163, 0.3);
+  background: linear-gradient(45deg, #ff65a3, #ff4c8c);
+}
+
+.projet-img[src=""], 
+.projet-img:not([src]) {
+  display: none;
+}
+
+.projet-image:has(.projet-img[src=""]) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #f8f4ff, #ffeef7);
+}
+
+.projet-image:has(.projet-img[src=""])::before {
+  content: '🖼️ Image non disponible';
+  color: #ff7eb9;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .projets-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .projet-card {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .projets {
+    padding: 60px 0;
+  }
+  
+  .projet-image {
+    height: 200px;
+  }
+  
+  .projet-content {
+    padding: 20px;
+  }
+  
+  .projet-links {
+    flex-direction: column;
+  }
+  
+  .projet-link {
+    justify-content: center;
+  }
+  
+  .carousel-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projets-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projet-features {
+    justify-content: center;
+  }
+  
+  .projet-links {
+    align-items: center;
+  }
+  
+  .projet-card {
+    margin: 0 10px;
+  }
+}
+
+/* Alternative si les images ne sont pas trouvées */
+.projet-placeholder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #f8f4ff, #ffeef7);
+  color: #ff7eb9;
+  padding: 20px;
+}
+
+.projet-placeholder i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.projet-placeholder p {
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.1rem;
+}
+/* Empêcher le défilement horizontal involontaire */
+.projets-grid {
+  overflow: hidden;
+}
+
+/* S'assurer que les contrôles du carousel ne provoquent pas de défilement */
+.carousel-btn {
+  z-index: 10;
+  position: relative;
+}
+
+/* Amélioration de l'expérience tactile sur mobile */
+@media (max-width: 768px) {
+  .carousel-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.4rem;
+  }
+  
+  .projet-image {
+    touch-action: pan-y; /* Permet seulement le défilement vertical */
+  }
+}
+
+/* Animation plus fluide pour les transitions */
+.projet-img {
+  transition: opacity 0.3s ease-in-out;
+}
+/* Styles spécifiques pour les images mobiles du projet fitness */
+.projet-card:nth-child(4) .projet-image {
+  background: linear-gradient(135deg, #f8f4ff 0%, #fff0f8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.projet-card:nth-child(4) .projet-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.projet-card:nth-child(4) .projet-img {
+  width: auto;
+  height: 200px;
+  max-width: 120px;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 3px solid #fff;
+  background: #fff;
+}
+
+.projet-card:nth-child(4) .projet-img.active {
+  animation: mobileSlideIn 0.5s ease-out;
+}
+
+@keyframes mobileSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Badge spécial pour le projet mobile */
+.projet-card:nth-child(4) .projet-badge {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+  z-index: 10;
+}
+
+/* Amélioration des contrôles pour le projet mobile */
+.projet-card:nth-child(4) .carousel-controls {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.projet-card:nth-child(4) .carousel-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #28a745;
+  color: #28a745;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.projet-card:nth-child(4) .carousel-btn:hover {
+  background: #28a745;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Responsive pour les images mobiles */
+@media (max-width: 768px) {
+  .projet-card:nth-child(4) .projet-img {
+    height: 180px;
+    max-width: 100px;
+  }
+  
+  .projet-card:nth-child(4) .projet-image {
+    height: 220px;
+    padding: 15px;
+  }
+}
+/* Styles pour le projet Data Warehouse (5ème projet) */
+.projet-card:nth-child(5) .projet-badge {
+  background: linear-gradient(135deg, #6f42c1, #5a32a3);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  box-shadow: 0 4px 12px rgba(111, 66, 193, 0.3);
+  z-index: 10;
+}
+
+.projet-card:nth-child(5) .projet-image {
+  background: linear-gradient(135deg, #f8f4ff 0%, #f0e6ff 100%);
+}
+
+/* Style pour les informations de projet (sans lien) */
+.projet-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #6c757d, #5a6268);
+  color: white;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.projet-info i {
+  font-size: 1rem;
+}
+
+/* Amélioration du responsive pour 5 projets */
+@media (max-width: 1200px) {
+  .projets-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .projets-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,74 @@
+<section id="about" class="about section">
+  <div class="container">
+    <h2 class="section-title">À propos de moi</h2>
+    
+    <div class="about-content">
+      <!-- Image à gauche -->
+      <div class="about-image">
+        <div class="image-wrapper">
+          <img src="images\photodeAbir.jpeg" alt="Abir Annabi" class="profile-image">
+          
+          <!-- Éléments décoratifs flottants -->
+          <div class="floating-shape shape-1"></div>
+          <div class="floating-shape shape-2"></div>
+          <div class="floating-shape shape-3"></div>
+          <div class="floating-shape shape-4"></div>
+          
+          <!-- Badge compétences -->
+          <div class="skill-badge">
+            <i class="fas fa-code"></i>
+            <span>Développeuse Fullstack</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contenu à droite -->
+      <div class="about-text">
+        <div class="intro-text">
+          <h3>Passionnée par la <span class="highlight">création digitale</span></h3>
+          <p>{{ profileData.about }}</p>
+        </div>
+        
+        <!-- Carte d'information personnelle -->
+        <div class="info-card">
+          <div class="card-header">
+            <i class="fas fa-user-circle"></i>
+            <h4>Informations Personnelles</h4>
+          </div>
+          <div class="card-content">
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-signature"></i>
+              </div>
+              <div class="info-details">
+                <span class="info-label">Nom complet</span>
+                <span class="info-value">{{ profileData.name }}</span>
+              </div>
+            </div>
+            
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="info-details">
+                <span class="info-label">Email</span>
+                <a href="mailto:{{ profileData.email }}" class="info-value">{{ profileData.email }}</a>
+              </div>
+            </div>
+            
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info-details">
+                <span class="info-label">Localisation</span>
+                <span class="info-value">{{ profileData.location }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>

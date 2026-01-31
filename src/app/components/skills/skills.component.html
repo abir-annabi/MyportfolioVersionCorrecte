@@ -1,0 +1,44 @@
+<section id="skills" class="skills section">
+  <div class="container">
+    <h2 class="section-title">Mes Compétences</h2>
+    
+    <!-- Introduction -->
+    <div class="skills-intro">
+      <p>Je maîtrise un large éventail de technologies modernes qui me permettent de créer des solutions innovantes et efficaces.</p>
+    </div>
+
+  
+    <!-- Technologies sous forme de nuage de tags -->
+    <div class="technologies-cloud">
+      <h3>Technologies Maîtrisées</h3>
+      <div class="cloud-container">
+        <div *ngFor="let tech of getAllTechnologies()" 
+             class="tech-tag"
+             [style.--size]="getTechSize(tech.level)">
+          <div class="tech-icon">
+            <i [class]="getTechIcon(tech.name)"></i>
+          </div>
+          <span>{{ tech.name }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compétences linguistiques - Design créatif -->
+    <div class="languages-showcase">
+      <h3>Compétences Linguistiques</h3>
+      <div class="languages-container">
+        <div *ngFor="let language of languages" class="language-card">
+          <div class="language-visual">
+            <div class="language-progress-circle" [style.--progress]="getLanguageProgress(language.level)">
+              <span class="language-flag">{{ getLanguageFlag(language.name) }}</span>
+            </div>
+          </div>
+          <div class="language-details">
+            <h4>{{ language.name }}</h4>
+            <span class="language-level-badge">{{ language.level }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
