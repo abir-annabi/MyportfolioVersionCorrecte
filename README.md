@@ -1,59 +1,142 @@
-# MyPortfolio
+# Portfolio Abir Annabi - 2025
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+Portfolio personnel développé avec Angular 19, présentant mes compétences, projets et expériences en développement web et mobile.
 
-## Development server
+## 🚀 Fonctionnalités
 
-To start a local development server, run:
+- **Design Responsive** : Interface adaptée à tous les appareils
+- **Animations Fluides** : Transitions et effets visuels modernes
+- **Carousel de Projets** : Présentation interactive des réalisations
+- **Section Compétences** : Visualisation des technologies maîtrisées
+- **Projets Académiques** : Timeline des projets universitaires
+- **CV Téléchargeable** : Accès direct au CV au format PDF
 
+## 🛠️ Technologies Utilisées
+
+- **Frontend** : Angular 19, TypeScript, HTML5, CSS3
+- **Styling** : CSS Grid, Flexbox, Animations CSS
+- **Icons** : Font Awesome
+- **Build Tool** : Angular CLI
+
+## 📋 Sections du Portfolio
+
+### 🏠 Accueil
+- Présentation personnelle
+- Boutons d'action (Contact, Compétences, CV)
+- Éléments flottants avec technologies
+
+### 👤 À Propos
+- Biographie détaillée
+- Informations personnelles
+- Timeline des projets académiques
+
+### 💼 Compétences
+- Compétences techniques par catégorie :
+  - Frontend (Angular, React, JavaScript, HTML/CSS)
+  - Backend (Java, Spring Boot, Kotlin, Python, PHP)
+  - Mobile (Android, Kotlin, Flutter)
+  - Base de données (SQL, PostgreSQL, MySQL, MongoDB)
+  - Outils (Git, Docker, Kubernetes, Power BI)
+- Langues parlées
+
+### 🚀 Projets
+1. **E-commerce Symfony** - Plateforme de vente de livres
+2. **Gestion Municipale** - Application Spring Boot/Angular
+3. **Location Immobilière** - Plateforme full-stack
+4. **Application Fitness** - App mobile Kotlin avec IA
+
+### 🎓 Formation
+- Licence en Développement des Systèmes d'Information (ISET Radès)
+- Baccalauréat Sciences Mathématiques
+
+### 📞 Contact
+- Formulaire de contact
+- Liens vers réseaux sociaux
+
+## 🔧 Installation et Développement
+
+### Prérequis
+- Node.js (version 18+)
+- Angular CLI (version 19+)
+
+### Installation
 ```bash
+# Cloner le repository
+git clone [URL_DU_REPO]
+
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+L'application sera accessible sur `http://localhost:4200/`
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+### Build de Production
 ```bash
-ng generate component component-name
+ng build --prod
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📁 Structure du Projet
 
-```bash
-ng generate --help
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── about/          # Section À propos
+│   │   ├── contact/        # Formulaire de contact
+│   │   ├── education/      # Formation
+│   │   ├── footer/         # Pied de page
+│   │   ├── header/         # Navigation
+│   │   ├── home/           # Page d'accueil
+│   │   ├── projets/        # Portfolio projets
+│   │   └── skills/         # Compétences
+│   ├── models/             # Interfaces TypeScript
+│   ├── services/           # Services Angular
+│   └── ...
+├── assets/                 # Ressources statiques
+└── public/
+    ├── images/             # Images du portfolio
+    └── cv/                 # CV PDF
 ```
 
-## Building
+## 🎨 Personnalisation
 
-To build the project run:
+### Couleurs Principales
+- **Primary** : `#ff7eb9` (Rose)
+- **Secondary** : `#7afcff` (Cyan)
+- **Accent** : `#28a745` (Vert)
 
-```bash
-ng build
-```
+### Modification des Données
+Les informations personnelles sont centralisées dans `src/app/services/data.service.ts`
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 📱 Responsive Design
 
-## Running unit tests
+Le portfolio est optimisé pour :
+- **Desktop** : 1200px+
+- **Tablet** : 768px - 1199px
+- **Mobile** : < 768px
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 🚀 Déploiement
 
-```bash
-ng test
-```
+Le projet peut être déployé sur :
+- GitHub Pages
+- Netlify
+- Vercel
+- Firebase Hosting
 
-## Running end-to-end tests
+## 📄 Licence
 
-For end-to-end (e2e) testing, run:
+Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
-```bash
-ng e2e
-```
+## 👤 Contact
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+**Abir Annabi**
+- Email : abiramabil5@gmail.com
+- LinkedIn : [linkedin.com/in/abir-annabi](https://www.linkedin.com/in/abir-annabi)
+- GitHub : [github.com/abir-annabi](https://github.com/abir-annabi)
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+*Portfolio mis à jour en 2025 avec les dernières technologies et projets*
